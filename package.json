@@ -11,6 +11,7 @@
     "check-all": "prettier . -c",
     "format-all": "prettier . -w",
     "lint": "ng lint",
+    "serve:pwa": "http-server -p 8080 -c-1 dist/agari-kai",
     "ci:build": "ng build --configuration=development",
     "ci:unit": "jest --runInBand",
     "ci:e2e": "ng run agari-kai:cypress-run",
@@ -32,6 +33,7 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
+    "@angular/service-worker": "^16.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -49,12 +51,13 @@
     "@types/jest": "^29.5.1",
     "@typescript-eslint/eslint-plugin": "5.59.2",
     "@typescript-eslint/parser": "5.59.2",
+    "cypress": "^12.12.0",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
+    "http-server": "^14.1.1",
     "jest": "^29.5.0",
     "jest-preset-angular": "^13.1.1",
     "prettier": "^2.8.8",
-    "typescript": "~5.0.2",
-    "cypress": "^12.12.0"
+    "typescript": "~5.0.2"
   }
 }
