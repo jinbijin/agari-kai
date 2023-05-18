@@ -1,0 +1,5 @@
+# Angular cache files
+.angular
+
+# Angular output folder
+dist
