@@ -11,8 +11,10 @@
     "check-all": "prettier . -c",
     "format-all": "prettier . -w",
     "lint": "ng lint",
+    "ci:build": "ng build --configuration=development",
     "ci:unit": "jest --runInBand",
-    "ci:e2e": "ng run agari-kai:cypress-run"
+    "ci:e2e": "ng run agari-kai:cypress-run",
+    "cd:build": "ng build --configuration=production"
   },
   "jest": {
     "preset": "jest-preset-angular",
