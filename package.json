@@ -7,14 +7,13 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest --watch",
-    "e2e": "ng e2e",
+    "e2e": "ng run agari-kai:cypress-run",
     "check-all": "prettier . -c",
     "format-all": "prettier . -w",
     "lint": "ng lint",
     "serve:pwa": "http-server -p 8080 -c-1 dist/agari-kai",
     "ci:build": "ng build --configuration=development",
     "ci:unit": "jest --runInBand",
-    "ci:e2e": "ng run agari-kai:cypress-run",
     "cd:build": "ng build --configuration=production"
   },
   "jest": {
