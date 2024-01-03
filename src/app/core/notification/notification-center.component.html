@@ -1,0 +1,15 @@
+@if (expanded()) {
+  <h2>Notifications</h2>
+}
+@for (notification of notifications(); track notification.id; let i = $index) {
+  <agari-notification
+    [notification]="notification"
+    [showDismiss]="expanded()"
+    (actionTriggered)="dismiss(i, true)"
+    (dismissed)="dismiss(i, false)"
+  ></agari-notification>
+} @empty {
+  @if (expanded()) {
+    <p>There are currently no active notifications.</p>
+  }
+}

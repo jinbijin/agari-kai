@@ -1,0 +1,46 @@
+@mixin create-variables() {
+  --agari-ref-typeface: 'Noto Sans';
+  --agari-ref-typeface-cjk: 'Noto Sans JP';
+  --agari-ref-typeface-icon: 'Material Symbols Outlined';
+
+  --agari-ref-typeface-weight-regular: 400;
+  --agari-ref-typeface-weight-medium: 500;
+}
+
+@mixin set-styles() {
+  :root {
+    font-family: var(--agari-ref-typeface), sans-serif;
+  }
+
+  .cjk {
+    font-family: var(--agari-ref-typeface-cjk), sans-serif;
+  }
+}
+
+@mixin create-icon-content-style() {
+  font-weight: var(--agari-ref-typeface-weight-regular);
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+@mixin create-body-medium-style() {
+  font-weight: var(--agari-ref-typeface-weight-regular);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+@mixin create-label-medium-style() {
+  font-weight: var(--agari-ref-typeface-weight-medium);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+@mixin create-title-large-style() {
+  font-weight: var(--agari-ref-typeface-weight-regular);
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0px;
+}

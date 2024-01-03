@@ -1,0 +1,7 @@
+<p>{{ notification.message }}</p>
+@if (notification.triggers.action; as action) {
+  <button (click)="actionTriggered.emit()" data-test-id="notification-action">{{ action.label }}</button>
+}
+@if (showDismiss) {
+  <button (click)="dismissed.emit()" data-test-id="notification-dismiss">Dismiss</button>
+}

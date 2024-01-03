@@ -1,0 +1,29 @@
+@mixin create-variables() {
+  --agari-ref-color-base-hue: 260;
+  --agari-ref-color-base-chroma: 0.013;
+
+  --agari-ref-color-primary-hue: var(--agari-ref-color-base-hue);
+  --agari-ref-color-primary-chroma: calc(9 * var(--agari-ref-color-base-chroma));
+  --agari-ref-color-primary: var(--agari-ref-color-primary-chroma) var(--agari-ref-color-primary-hue);
+
+  --agari-ref-color-secondary-hue: var(--agari-ref-color-base-hue);
+  --agari-ref-color-secondary-chroma: calc(4 * var(--agari-ref-color-base-chroma));
+  --agari-ref-color-secondary: var(--agari-ref-color-secondary-chroma) var(--agari-ref-color-secondary-hue);
+
+  --agari-ref-color-tertiary-hue: calc(var(--agari-ref-color-base-hue) + 60);
+  --agari-ref-color-tertiary-chroma: calc(6 * var(--agari-ref-color-base-chroma));
+  --agari-ref-color-tertiary: var(--agari-ref-color-tertiary-chroma) var(--agari-ref-color-tertiary-hue);
+
+  --agari-ref-color-error-hue: 28;
+  --agari-ref-color-error-chroma: 0.21;
+  --agari-ref-color-error: var(--agari-ref-color-error-chroma) var(--agari-ref-color-error-hue);
+
+  --agari-ref-color-neutral-hue: var(--agari-ref-color-base-hue);
+  --agari-ref-color-neutral-chroma: var(--agari-ref-color-base-chroma);
+  --agari-ref-color-neutral: var(--agari-ref-color-neutral-chroma) var(--agari-ref-color-neutral-hue);
+
+  --agari-ref-color-neutral-variant-hue: var(--agari-ref-color-base-hue);
+  --agari-ref-color-neutral-variant-chroma: var(--agari-ref-color-base-chroma);
+  --agari-ref-color-neutral-variant: var(--agari-ref-color-neutral-variant-chroma)
+    var(--agari-ref-color-neutral-variant-hue);
+}

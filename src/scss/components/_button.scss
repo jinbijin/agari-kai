@@ -1,0 +1,35 @@
+@use 'abstract/shapes';
+@use 'abstract/state';
+@use 'typography';
+
+@mixin set-styles() {
+  button {
+    @include shapes.create-pill(var(--_height));
+    @include state.create-state-layer();
+    @include typography.create-label-medium-style();
+    --_height: 40px;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    position: relative;
+    padding-block: 10px;
+    padding-inline: 12px 12px;
+
+    &:disabled {
+      opacity: 0.36;
+    }
+
+    // State layer
+    &::before {
+      @include shapes.create-pill(var(--_height));
+    }
+
+    &[data-button-type='icon'] {
+      @include typography.create-icon-content-style();
+      font-family: var(--agari-ref-typeface-icon);
+      padding: 8px;
+    }
+  }
+}

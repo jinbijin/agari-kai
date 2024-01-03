@@ -1,0 +1,28 @@
+:host {
+  --_notification-background: var(--agari-sys-color-inverse-surface);
+  --_notification-on-background: var(--agari-sys-color-inverse-on-surface);
+  --_notification-on-background-tint: var(--agari-sys-color-inverse-on-surface-tint);
+
+  inline-size: calc(100% - 2rem);
+  margin-inline-start: 1rem;
+  margin-inline-end: 1rem;
+  margin-block-end: 1rem;
+  margin-block-start: auto;
+  padding: 0px;
+  border: none;
+  background: transparent;
+
+  > * {
+    padding-inline: 16px 8px;
+  }
+}
+
+:host(.expanded) {
+  --_notification-background: var(--agari-sys-color-surface-container);
+  --_notification-on-background: var(--agari-sys-color-on-surface-container);
+  --_notification-on-background-tint: var(--agari-sys-color-primary);
+
+  background: var(--_notification-background);
+  border-radius: 8px;
+  color: var(--_notification-on-background);
+}

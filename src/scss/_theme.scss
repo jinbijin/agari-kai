@@ -1,0 +1,32 @@
+@mixin create-variables() {
+  --agari-sys-color-primary-oklch: var(--agari-ref-luminosity-foreground) var(--agari-ref-color-primary);
+  --agari-sys-color-primary: oklch(var(--agari-sys-color-primary-oklch));
+  --agari-sys-color-on-primary-oklch: var(--agari-ref-luminosity-on-foreground) var(--agari-ref-color-primary);
+  --agari-sys-color-on-primary: oklch(var(--agari-sys-color-on-primary-oklch));
+
+  --agari-sys-color-surface-oklch: var(--agari-ref-luminosity-background) var(--agari-ref-color-neutral);
+  --agari-sys-color-surface: oklch(var(--agari-sys-color-surface-oklch));
+  --agari-sys-color-on-surface-oklch: var(--agari-ref-luminosity-on-background) var(--agari-ref-color-neutral);
+  --agari-sys-color-on-surface: oklch(var(--agari-sys-color-on-surface-oklch));
+
+  --agari-sys-color-surface-container-oklch: var(--agari-ref-luminosity-container) var(--agari-ref-color-neutral);
+  --agari-sys-color-surface-container: oklch(var(--agari-sys-color-surface-container-oklch));
+  --agari-sys-color-on-surface-container-oklch: var(--agari-ref-luminosity-on-container) var(--agari-ref-color-neutral);
+  --agari-sys-color-on-surface-container: oklch(var(--agari-sys-color-on-surface-container-oklch));
+
+  --agari-sys-color-inverse-surface-oklch: var(--agari-ref-luminosity-inverse-background) var(--agari-ref-color-neutral);
+  --agari-sys-color-inverse-surface: oklch(var(--agari-sys-color-inverse-surface-oklch));
+  --agari-sys-color-inverse-on-surface-oklch: var(--agari-ref-luminosity-inverse-on-background)
+    var(--agari-ref-color-neutral);
+  --agari-sys-color-inverse-on-surface: oklch(var(--agari-sys-color-inverse-on-surface-oklch));
+  --agari-sys-color-inverse-on-surface-tint-oklch: var(--agari-ref-luminosity-inverse-on-background-tint)
+    var(--agari-ref-color-primary);
+  --agari-sys-color-inverse-on-surface-tint: oklch(var(--agari-sys-color-inverse-on-surface-tint-oklch));
+
+  --agari-sys-color-surface-variant-oklch: var(--agari-ref-luminosity-background-variant)
+    var(--agari-ref-color-neutral-variant);
+  --agari-sys-color-surface-variant: oklch(var(--agari-sys-color-surface-variant-oklch));
+  --agari-sys-color-on-surface-variant-oklch: var(--agari-ref-luminosity-on-background-variant)
+    var(--agari-ref-color-neutral-variant);
+  --agari-sys-color-on-surface-variant: oklch(var(--agari-sys-color-on-surface-variant-oklch));
+}

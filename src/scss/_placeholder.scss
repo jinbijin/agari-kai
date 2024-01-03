@@ -1,0 +1,72 @@
+@mixin set-styles() {
+  agari-root:not([ng-version])::before {
+    content: 'loading agari-kai...';
+    font-family: var(--agari-sys-ref-typeface);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 100vh;
+    background-color: var(--agari-sys-color-surface-variant);
+    color: oklch(var(--agari-sys-color-on-surface-variant-oklch) / 0);
+    animation-duration: 800ms, 1200ms;
+    animation-name: phasein, phasewave;
+    animation-delay: 800ms, 1600ms;
+    animation-direction: normal, alternate;
+    animation-iteration-count: 1, infinite;
+    animation-timing-function: ease-in, ease-in-out;
+    z-index: 2;
+  }
+
+  agari-root[ng-version]::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: var(--agari-sys-color-surface-variant);
+    animation-duration: 400ms;
+    animation-name: slideopen;
+    animation-timing-function: cubic-bezier(0.3, 0, 0.8, 0.15);
+    z-index: 2;
+  }
+
+  .agari-preload {
+    visibility: hidden;
+  }
+
+  .agari-preload-icons {
+    @extend .agari-preload;
+    font-family: 'Material Symbols Outlined';
+  }
+
+  @keyframes slideopen {
+    from {
+      height: 100vh;
+    }
+    to {
+      height: 0px;
+    }
+  }
+
+  @keyframes phasein {
+    from {
+      color: oklch(var(--agari-sys-color-on-surface-variant-oklch) / 0);
+    }
+    to {
+      color: oklch(var(--agari-sys-color-on-surface-variant-oklch) / 1);
+    }
+  }
+
+  @keyframes phasewave {
+    from {
+      color: oklch(var(--agari-sys-color-on-surface-variant-oklch) / 1);
+    }
+    to {
+      color: oklch(var(--agari-sys-color-on-surface-variant-oklch) / 0.6);
+    }
+  }
+}
