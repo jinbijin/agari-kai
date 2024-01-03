@@ -1,0 +1,29 @@
+@use 'typography';
+
+:host {
+  background-color: var(--agari-sys-color-surface);
+  color: var(--agari-sys-color-on-surface);
+  display: block flex;
+  flex-flow: row nowrap;
+  padding-block: 18px;
+  padding-inline: 16px;
+  gap: 24px;
+}
+
+h1 {
+  @include typography.create-title-large-style();
+
+  flex: auto 1 0;
+  margin-block: 0;
+  margin-inline-start: 64px;
+  text-align: center;
+}
+
+button {
+  color: var(--agari-sys-color-on-surface-variant);
+  margin-block: -6px;
+
+  &::before {
+    background: var(--agari-sys-color-on-surface-variant);
+  }
+}

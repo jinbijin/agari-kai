@@ -1,0 +1,16 @@
+@mixin create-theme-variables() {
+  --agari-ref-luminosity-foreground: 80%;
+  --agari-ref-luminosity-on-foreground: 30%;
+  --agari-ref-luminosity-container: 40%;
+  --agari-ref-luminosity-on-container: 90%;
+  --agari-ref-luminosity-background: 20%;
+  --agari-ref-luminosity-on-background: 90%;
+  --agari-ref-luminosity-inverse-background: 90%;
+  --agari-ref-luminosity-inverse-on-background: 30%;
+  --agari-ref-luminosity-inverse-on-background-tint: 40%;
+  --agari-ref-luminosity-background-variant: 40%;
+  --agari-ref-luminosity-on-background-variant: 80%;
+  --agari-ref-luminosity-outline: 60%;
+  --agari-ref-luminosity-outline-variant: 40%;
+  --agari-ref-luminosity-shadow: 0%;
+}

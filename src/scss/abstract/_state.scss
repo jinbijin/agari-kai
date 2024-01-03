@@ -1,0 +1,21 @@
+@mixin create-state-layer() {
+  &::before {
+    content: '';
+
+    inset: 0px;
+    opacity: 0;
+    position: absolute;
+  }
+
+  &:hover::before {
+    opacity: 0.08;
+  }
+
+  &:active::before {
+    opacity: 0.1;
+  }
+
+  &:focus::before {
+    opacity: 0.1;
+  }
+}
