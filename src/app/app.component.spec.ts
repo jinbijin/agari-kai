@@ -5,7 +5,7 @@ describe('AppComponent', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
       declarations: [AppComponent],
-    })
+    }),
   );
 
   it('should create the app', () => {
@@ -19,7 +19,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('[data-test-id="v0-marker"]')?.textContent).toContain(
-      'This app is under construction...'
+      'This app is under construction...',
     );
   });
 });
