@@ -55,7 +55,7 @@ jobs:
           app_build_command: npm run cd:build
           app_location: '/'
           api_location: '' # Not planned yet
-          output_location: 'dist/agari-kai'
+          output_location: 'dist/agari-kai/browser'
 
   deployment_verification_job:
     if: github.event_name == 'pull_request' && github.event.action != 'closed'

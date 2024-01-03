@@ -11,7 +11,7 @@
     "check-all": "prettier . -c",
     "format-all": "prettier . -w",
     "lint": "ng lint",
-    "serve:pwa": "http-server -p 8080 -c-1 dist/agari-kai",
+    "serve:pwa": "http-server -p 8080 -c-1 dist/agari-kai/browser",
     "ci:build": "ng build --configuration=development",
     "ci:unit": "jest --runInBand",
     "cd:build": "ng build --configuration=production"
