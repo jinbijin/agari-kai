@@ -2,3 +2,21 @@
   display: block;
   min-height: 100vh;
 }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+main {
+  margin-inline: auto;
+  padding: 1rem;
+  max-width: 80ch;
+}
+
+[data-test-id='v0-marker'] {
+  margin-inline: auto;
+  padding: 1rem;
+  max-width: 80ch;
+}

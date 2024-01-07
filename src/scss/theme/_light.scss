@@ -1,10 +1,13 @@
 @mixin create-theme-variables() {
+  --agari-ref-luminosity-background: 98%;
+  --agari-ref-luminosity-background-p1: 96%;
+  --agari-ref-luminosity-background-p2: 94%;
+  --agari-ref-luminosity-on-background: 10%;
+
   --agari-ref-luminosity-foreground: 40%;
   --agari-ref-luminosity-on-foreground: 100%;
   --agari-ref-luminosity-container: 90%;
   --agari-ref-luminosity-on-container: 10%;
-  --agari-ref-luminosity-background: 98%;
-  --agari-ref-luminosity-on-background: 10%;
   --agari-ref-luminosity-inverse-background: 20%;
   --agari-ref-luminosity-inverse-on-background: 95%;
   --agari-ref-luminosity-inverse-on-background-tint: 80%;

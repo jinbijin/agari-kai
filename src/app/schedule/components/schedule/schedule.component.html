@@ -1,0 +1,47 @@
+<table>
+  <caption>
+    Generated schedule for
+    {{
+      schedule.participantCount
+    }}
+    participants and
+    {{
+      schedule.roundCount
+    }}
+    rounds
+  </caption>
+  <col />
+  @for (i of tableIndices(); track i) {
+    <colgroup span="4"></colgroup>
+  }
+  <thead>
+    <tr>
+      <td></td>
+      @for (i of tableIndices(); track i) {
+        <th colspan="4" scope="colgroup">Table {{ i + 1 }}</th>
+      }
+    </tr>
+    <tr>
+      <td></td>
+      @for (i of tableIndices(); track i) {
+        @for (j of seatIndices; track j) {
+          <th scope="col">Seat {{ j + 1 }}</th>
+        }
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @for (round of schedule.rounds; track i; let i = $index) {
+      <tr>
+        <th scope="row">Round {{ i + 1 }}</th>
+        @for (table of round.tables; track j; let j = $index) {
+          @for (participant of table.participants; track k; let k = $index) {
+            <td attr.data-table="Table {{ j + 1 }}">
+              {{ participant }}
+            </td>
+          }
+        }
+      </tr>
+    }
+  </tbody>
+</table>

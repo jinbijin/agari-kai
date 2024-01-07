@@ -11,8 +11,6 @@
 }
 
 h1 {
-  @include typography.create-title-large-style();
-
   flex: auto 1 0;
   margin-block: 0;
   margin-inline-start: 64px;

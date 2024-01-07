@@ -1,0 +1,15 @@
+@mixin set-styles() {
+  :root {
+    scrollbar-gutter: stable both-edges;
+  }
+
+  ::-webkit-scrollbar {
+    background: oklch(var(--agari-ref-luminosity-background-p2) var(--agari-ref-color-neutral));
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: oklch(var(--agari-ref-luminosity-foreground) var(--agari-ref-color-primary));
+    border-radius: 3px;
+  }
+}
