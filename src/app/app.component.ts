@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { NotificationCenterComponent } from './core/notification/notification-center.component';
 import { InstallerService } from './core/installer/installer.service';
 import { AgariHeaderComponent } from './core/header/header.component';
@@ -8,7 +9,7 @@ import { AgariHeaderComponent } from './core/header/header.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [AgariHeaderComponent, NotificationCenterComponent],
+  imports: [AgariHeaderComponent, NotificationCenterComponent, RouterOutlet],
 })
 export class AppComponent {
   constructor() {

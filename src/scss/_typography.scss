@@ -15,6 +15,14 @@
   .cjk {
     font-family: var(--agari-ref-typeface-cjk), sans-serif;
   }
+
+  h1 {
+    @include create-title-large-style();
+  }
+
+  h2 {
+    @include create-title-large-style();
+  }
 }
 
 @mixin create-icon-content-style() {
@@ -24,11 +32,25 @@
   letter-spacing: 0px;
 }
 
+@mixin create-body-small-style() {
+  font-weight: var(--agari-ref-typeface-weight-regular);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+}
+
 @mixin create-body-medium-style() {
   font-weight: var(--agari-ref-typeface-weight-regular);
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.25px;
+}
+
+@mixin create-body-large-style() {
+  font-weight: var(--agari-ref-typeface-weight-regular);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
 }
 
 @mixin create-label-medium-style() {

@@ -1,0 +1,5 @@
+<h2>Schedule generator</h2>
+<agari-schedule-input (inputSubmitted)="onScheduleSubmit($event)" />
+@if (schedule(); as schedule) {
+  <agari-schedule [schedule]="schedule"></agari-schedule>
+}

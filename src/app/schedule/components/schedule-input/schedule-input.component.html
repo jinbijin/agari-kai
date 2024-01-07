@@ -1,0 +1,20 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label data-test-id="participant-count">
+    Participant count
+    <input type="number" formControlName="participantCount" />
+    @if ((form.controls.participantCount | agariValidationDisplayPolicy)(); as errors) {
+      <span role="alert">{{ errors | agariValidationMessage }}</span>
+    }
+  </label>
+  <label data-test-id="round-count">
+    Round count
+    <input type="number" formControlName="roundCount" />
+    @if ((form.controls.roundCount | agariValidationDisplayPolicy)(); as errors) {
+      <span role="alert">{{ errors | agariValidationMessage }}</span>
+    }
+    @if ((form | agariValidationDisplayPolicy)(); as formErrors) {
+      <span role="alert">{{ formErrors | agariValidationMessage }}</span>
+    }
+  </label>
+  <button type="submit">Generate!</button>
+</form>

@@ -1,0 +1,48 @@
+@use 'typography';
+
+form {
+  display: block grid;
+  position: relative;
+
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding-block-end: 40px;
+
+  > button {
+    position: absolute;
+
+    color: oklch(var(--agari-ref-luminosity-on-background) var(--agari-ref-color-primary));
+    inset-block-end: 0px;
+    inset-inline-end: 0px;
+
+    &::before {
+      background: oklch(var(--agari-ref-luminosity-on-background) var(--agari-ref-color-primary));
+    }
+  }
+}
+
+label {
+  @include typography.create-body-small-style();
+
+  display: block grid;
+
+  grid-template-rows: 16px 30px 16px;
+
+  > input:not([type='submit']) {
+    @include typography.create-body-large-style();
+
+    background: oklch(var(--agari-ref-luminosity-background-p2) var(--agari-ref-color-neutral));
+    border: none;
+    color: oklch(var(--agari-ref-luminosity-on-background) var(--agari-ref-color-neutral));
+    grid-row: 2;
+    height: 28px;
+  }
+
+  > span[role='alert'] {
+    grid-row: 3;
+  }
+
+  &:has(span[role='alert']) {
+    color: oklch(var(--agari-ref-luminosity-on-background) var(--agari-ref-color-error));
+  }
+}

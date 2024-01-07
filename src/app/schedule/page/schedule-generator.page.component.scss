@@ -1,0 +1,10 @@
+:host > * + * {
+  margin-block-start: 1rem;
+}
+
+h2 {
+  background: oklch(var(--agari-ref-luminosity-background) var(--agari-ref-color-neutral));
+  position: sticky;
+  top: 64px;
+  z-index: 1;
+}

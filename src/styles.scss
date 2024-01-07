@@ -2,6 +2,7 @@
 @use './scss/colors';
 @use './scss/components/button';
 @use './scss/reset';
+@use './scss/scrollbar';
 @use './scss/theme';
 @use './scss/theme/dark';
 @use './scss/theme/light';
@@ -30,4 +31,5 @@
 
 @include button.set-styles();
 @include placeholder.set-styles();
+@include scrollbar.set-styles();
 @include typography.set-styles();
